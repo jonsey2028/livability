@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livability LLC — Veteran-Owned Cattle Assets &amp; U.S. Herd Rebuilding</title>
+<meta name="description" content="A capital-formation program placing breeding cattle into veteran ownership, leased to qualified ranchers, compounding the U.S. breeding herd. Program Concept &amp; Validation Framework v3.">
+<meta property="og:title" content="Livability — Veteran-Owned Cattle Assets &amp; U.S. Herd Rebuilding">
+<meta property="og:description" content="Veterans own productive breeding cattle. Qualified ranchers operate them. Offspring-share compounding rebuilds America's herd. Evidence before scale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://livability.global">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c3a2a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23c9a45c' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --forest:#1c3a2a; --forest-deep:#12271c; --forest-mid:#2a5240;
+    --cream:#f5f1e6; --cream-deep:#ece5d3; --gold:#c9a45c; --gold-deep:#a8853f;
+    --ink:#1a1a17; --muted:#5d5b52; --line:#d8d0ba;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--cream); color:var(--ink); line-height:1.6; font-size:17px;
+  }
+  .serif{font-family:Georgia,"Times New Roman",serif;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  section{padding:72px 0;}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif; font-weight:600; color:var(--forest-deep);}
+  h2{font-size:34px; line-height:1.2; margin-bottom:14px;}
+  .kicker{ text-transform:uppercase; letter-spacing:.18em; font-size:12.5px; font-weight:700; color:var(--gold-deep); margin-bottom:10px;}
+  .lede{font-size:19px; color:var(--muted); max-width:760px; margin-bottom:8px;}
+  a{color:var(--forest-mid);}
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:50; background:rgba(18,39,28,.96); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(201,164,92,.35);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:62px;}
+  .brand{font-family:Georgia,serif; font-size:21px; color:var(--cream); letter-spacing:.06em;}
+  .brand span{color:var(--gold);}
+  nav .links{display:flex; gap:26px;}
+  nav .links a{color:var(--cream); text-decoration:none; font-size:14.5px; opacity:.86;}
+  nav .links a:hover{opacity:1; color:var(--gold);}
+  .nav-cta{
+    border:1px solid var(--gold); color:var(--gold)!important; padding:7px 16px; border-radius:4px;
+  }
+
+  /* HERO */
+  header{
+    background:
+      linear-gradient(160deg, rgba(18,39,28,.94) 0%, rgba(28,58,42,.9) 55%, rgba(42,82,64,.88) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 100 Q30 80 60 100 T120 100 V120 H0 Z' fill='rgba(201,164,92,0.07)'/%3E%3Cpath d='M0 60 Q30 42 60 60 T120 54' fill='none' stroke='rgba(201,164,92,0.10)' stroke-width='1.4'/%3E%3C/svg%3E");
+    color:var(--cream); padding:96px 0 84px;
+  }
+  header .llc{font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:22px; font-weight:600;}
+  header h1{color:#fff; font-size:52px; line-height:1.12; max-width:860px; margin-bottom:22px;}
+  header h1 em{font-style:italic; color:var(--gold);}
+  header .sub{font-size:19.5px; max-width:780px; color:rgba(245,241,230,.88); margin-bottom:30px;}
+  .chip{
+    display:inline-block; border:1px solid rgba(201,164,92,.65); color:var(--gold);
+    font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; padding:6px 14px; border-radius:999px;
+    margin-bottom:8px;
+  }
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:8px;}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:4px; text-decoration:none;
+    font-weight:600; font-size:15.5px; letter-spacing:.02em;
+  }
+  .btn-gold{background:var(--gold); color:var(--forest-deep);}
+  .btn-ghost{border:1px solid rgba(245,241,230,.5); color:var(--cream);}
+  .btn:hover{filter:brightness(1.06);}
+
+  /* STATS */
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin:38px 0 26px;}
+  .stat{
+    background:#fff; border:1px solid var(--line); border-top:3px solid var(--gold);
+    border-radius:6px; padding:22px 20px;
+  }
+  .stat .num{font-family:Georgia,serif; font-size:30px; color:var(--forest-deep); line-height:1.1;}
+  .stat .lbl{font-size:13.5px; color:var(--muted); margin-top:8px;}
+  .stat .delta{display:inline-block; font-size:12px; color:#8a4a2b; background:#f7e8df; border-radius:3px; padding:2px 7px; margin-top:10px; font-weight:600;}
+  .src{font-size:12.5px; color:var(--muted);}
+
+  /* STEP FLOW */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:36px;}
+  .step{background:#fff; border:1px solid var(--line); border-radius:6px; padding:26px 22px; position:relative;}
+  .step .n{
+    width:34px; height:34px; border-radius:50%; background:var(--forest); color:var(--gold);
+    font-family:Georgia,serif; font-size:17px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .step h3{font-size:19px; margin-bottom:8px;}
+  .step p{font-size:14.5px; color:var(--muted);}
+  .step .note{font-size:12.5px; color:var(--gold-deep); font-style:italic; margin-top:10px;}
+
+  /* TWO COLUMN */
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:30px;}
+  .panel{background:#fff; border:1px solid var(--line); border-radius:6px; padding:28px;}
+  .panel h3{margin-bottom:12px;}
+  .panel ul{list-style:none;}
+  .panel li{padding:9px 0 9px 26px; position:relative; font-size:15.5px; border-bottom:1px solid #f0ead9;}
+  .panel li:last-child{border-bottom:none;}
+  .panel li::before{content:"◆"; position:absolute; left:2px; color:var(--gold); font-size:11px; top:12px;}
+
+  /* GATES TABLE */
+  .gate-table{width:100%; border-collapse:collapse; margin-top:30px; background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 1px 0 var(--line);}
+  .gate-table th{
+    background:var(--forest); color:var(--cream); text-align:left; font-size:13px;
+    text-transform:uppercase; letter-spacing:.1em; padding:13px 18px;
+  }
+  .gate-table td{padding:14px 18px; border-top:1px solid var(--line); font-size:15px; vertical-align:top;}
+  .gate-table td:first-child{font-family:Georgia,serif; color:var(--forest-deep); white-space:nowrap; font-size:15.5px;}
+  .status{
+    display:inline-block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:3px 10px; border-radius:999px; white-space:nowrap;
+  }
+  .s-ok{background:#e4efe4; color:#2a5240;}
+  .s-review{background:#f7ecd4; color:#8a6a20;}
+  .s-model{background:#e7e4f2; color:#4a4372;}
+
+  /* ASSUMPTIONS / DISCIPLINE */
+  .discipline{
+    background:var(--forest-deep); color:var(--cream); border-radius:8px; padding:40px 38px; margin-top:34px;
+  }
+  .discipline h3{color:var(--gold); font-size:22px; margin-bottom:14px;}
+  .discipline p{color:rgba(245,241,230,.85); font-size:15.5px; max-width:820px;}
+  .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
+  .wchip{
+    border:1px solid rgba(201,164,92,.55); color:var(--cream); font-size:13px;
+    padding:6px 14px; border-radius:999px; background:rgba(201,164,92,.08);
+  }
+
+  /* CONTACT */
+  .contact-box{background:#fff; border:1px solid var(--line); border-radius:8px; padding:36px; margin-top:30px; text-align:center;}
+  .contact-box .big{font-family:Georgia,serif; font-size:24px; color:var(--forest-deep); margin-bottom:10px;}
+  .contact-mail{
+    display:inline-block; margin-top:6px; font-size:18px; color:var(--forest-mid);
+    text-decoration:none; border-bottom:2px solid var(--gold); padding-bottom:2px;
+  }
+
+  footer{background:var(--forest-deep); color:rgba(245,241,230,.72); padding:44px 0 52px; font-size:13.5px;}
+  footer .brandline{font-family:Georgia,serif; color:var(--gold); font-size:18px; margin-bottom:14px;}
+  footer .disc{max-width:900px; line-height:1.7; color:rgba(245,241,230,.6);}
+  footer .legal{margin-top:18px; font-size:12px; color:rgba(245,241,230,.45);}
+
+  @media(max-width:900px){
+    .stats,.steps{grid-template-columns:repeat(2,1fr);}
+    header h1{font-size:38px;}
+    .cols{grid-template-columns:1fr;}
+    nav .links{display:none;}
+  }
+  @media(max-width:560px){
+    .stats,.steps{grid-template-columns:1fr;}
+    section{padding:52px 0;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">LIVABILITY<span>.</span>GLOBAL</div>
+    <div class="links">
+      <a href="#problem">The Gap</a>
+      <a href="#model">The Model</a>
+      <a href="#veterans">Veterans</a>
+      <a href="#validation">Validation</a>
+      <a href="#contact" class="nav-cta">Investor Inquiries</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="llc">Livability LLC &nbsp;·&nbsp; Program Concept &amp; Validation Framework v3</div>
+    <span class="chip">Veteran-Owned Cattle Asset Program</span>
+    <h1>Rebuilding America's breeding herd — <em>one veteran-owned heifer</em> at a time.</h1>
+    <p class="sub">Livability places breeding cattle into the ownership of U.S. veterans, leases them to qualified ranchers for management and reproduction, and returns a share of offspring to the veteran each cycle. Veterans compound productive assets. The nation rebuilds strategic herd capacity.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#model">How the Model Works</a>
+      <a class="btn btn-ghost" href="#validation">Evidence &amp; Validation</a>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="kicker">The Strategic Gap</div>
+    <h2>The U.S. breeding herd is at multi-decade lows — and biology makes recovery slow.</h2>
+    <p class="lede">A reduced national cow herd narrows future beef supply, raises acquisition costs, and creates a strategic food-supply vulnerability. Because cattle reproduce on a biological clock — not a market clock — herd rebuilding takes years. Retaining more domestic heifers today tightens near-term supply further, which is why scaled sourcing and structured herd-building deserve institutional attention.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="num">86.2M</div>
+        <div class="lbl">All U.S. cattle &amp; calves, Jan 1 2026</div>
+        <span class="delta">▼ slightly vs 86.5M in 2025</span>
+      </div>
+      <div class="stat">
+        <div class="num">27.6M</div>
+        <div class="lbl">Beef cows — continuing a multi-decade decline</div>
+        <span class="delta">▼ 1% year over year</span>
+      </div>
+      <div class="stat">
+        <div class="num">32.9M</div>
+        <div class="lbl">2025 calf crop</div>
+        <span class="delta">▼ 2% vs prior year</span>
+      </div>
+      <div class="stat">
+        <div class="num">13.8M</div>
+        <div class="lbl">Cattle on feed, Jan 1 2026</div>
+        <span class="delta">▼ 3% vs 2025</span>
+      </div>
+    </div>
+    <p class="src">Source: USDA NASS <em>Cattle</em> report, January 30, 2026 (national inventory estimates).</p>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section id="model" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <div class="kicker">The Operating Model</div>
+    <h2>Cattle as compounding, income-producing assets.</h2>
+    <p class="lede">Veterans participate as owners — not as operators. Experienced ranchers provide custody, husbandry, breeding and daily management under standardized lease and herd-management agreements. An offspring-sharing formula returns breeding stock to the veteran each cycle.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Acquire</h3>
+        <p>Breeding heifers sourced through domestic purchases — blended, subject to regulatory validation, with imports from approved disease-free regions abroad.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Lease</h3>
+        <p>Veteran-owned cattle placed with qualified ranchers under defined lease terms: custody, animal health, breeding and operational management.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Calve &amp; Share</h3>
+        <p>An agreed offspring-sharing formula returns a portion of each season's calf crop to the veteran owner — the framework's illustrative starting point under validation is roughly 20 head returned per 100 leased.</p>
+        <div class="note">Illustrative figure — pending rancher-economics validation</div>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h3>Compound</h3>
+        <p>Returned offspring join the veteran's herd. Each completed cycle expands the veteran's productive asset base — and the nation's breeding capacity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VETERANS -->
+<section id="veterans">
+  <div class="wrap">
+    <div class="kicker">The Veteran Proposition</div>
+    <h2>Ownership with protections built in from day one.</h2>
+    <p class="lede">The veteran model is designed as a distinct program architecture — not a secondary benefit. Participation safeguards are defined before any veteran is enrolled.</p>
+
+    <div class="cols">
+      <div class="panel">
+        <h3>What veterans receive</h3>
+        <ul>
+          <li>Direct ownership of productive breeding cattle</li>
+          <li>Professional ranching operations under standardized leases</li>
+          <li>A contractual share of offspring each breeding cycle</li>
+          <li>Asset growth across repeated cycles — with defined valuation</li>
+          <li>Defined exit rights and liquidity provisions</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Program safeguards under design</h3>
+        <ul>
+          <li>Participant suitability standards and full disclosures</li>
+          <li>Custody, valuation and audit controls</li>
+          <li>Mortality and disease risk allocation</li>
+          <li>Insurance requirements on leased cattle</li>
+          <li>Default, recovery and exit mechanics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFRASTRUCTURE STRIP -->
+<section style="background:var(--cream-deep); padding:56px 0;">
+  <div class="wrap">
+    <div class="kicker">Staged Infrastructure</div>
+    <h2 style="font-size:28px;">Use what exists. Build what's proven.</h2>
+    <p class="lede" style="max-width:860px;">Near-term operations can run on existing feedlot, corn and ethanol capacity. Medium-term modeling covers regional pasture, irrigation and seasonal movement. Long-term rotational grazing and crop-integration are pursued only where agronomic evidence supports them — a regenerative path for soil, herd and food quality.</p>
+  </div>
+</section>
+
+<!-- VALIDATION -->
+<section id="validation">
+  <div class="wrap">
+    <div class="kicker">Evidence Before Scale</div>
+    <h2>A stage-gated validation program — not a promotion campaign.</h2>
+    <p class="lede">Livability advances through evidence-based validation gates. External claims follow evidence; they do not precede it. Key working assumptions and their current status:</p>
+
+    <table class="gate-table">
+      <tr><th>Working Assumption</th><th>Status</th><th>Evidence Required</th></tr>
+      <tr>
+        <td>U.S. breeding herd at historically low levels</td>
+        <td><span class="status s-ok">Validated</span></td>
+        <td>USDA NASS data — confirmed Jan 2026: multi-decade low beef-cow inventory</td>
+      </tr>
+      <tr>
+        <td>Offspring-share economics work for rancher and veteran</td>
+        <td><span class="status s-model">Modeling</span></td>
+        <td>Ranching economics, breeding rates, lease benchmarks, sensitivity models</td>
+      </tr>
+      <tr>
+        <td>International sourcing is viable and compliant</td>
+        <td><span class="status s-review">Regulatory review</span></td>
+        <td>USDA/APHIS import rules, disease-free regional status, quarantine protocols</td>
+      </tr>
+      <tr>
+        <td>Program financing structure is available and suitable</td>
+        <td><span class="status s-model">Definition</span></td>
+        <td>Legal entity analysis, capital-provider feedback, securities and tax review</td>
+      </tr>
+      <tr>
+        <td>Pilot operations are practical and controlled</td>
+        <td><span class="status s-review">Design phase</span></td>
+        <td>Bounded pilot charter: scope, geography, budget, controls, go/no-go criteria</td>
+      </tr>
+    </table>
+
+    <div class="discipline">
+      <h3>Eight validation workstreams</h3>
+      <p>Market &amp; herd need · Animal health &amp; import regulation · Agricultural operations · Veteran ownership &amp; economics · Finance &amp; underwriting · Legal &amp; compliance · Government strategy · Pilot design. Each workstream must clear its gate before the program advances — partners confirm plausibility, a bounded pilot proves the economics, and institutional scale follows evidence.</p>
+      <div class="chips">
+        <span class="wchip">Market &amp; Herd Need</span>
+        <span class="wchip">Animal Health &amp; Import Regulation</span>
+        <span class="wchip">Agricultural Operations</span>
+        <span class="wchip">Veteran Ownership &amp; Economics</span>
+        <span class="wchip">Finance &amp; Underwriting</span>
+        <span class="wchip">Legal &amp; Compliance</span>
+        <span class="wchip">Government Strategy</span>
+        <span class="wchip">Pilot Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--cream-deep);">
+  <div class="wrap">
+    <div class="kicker">Institutional Inquiries</div>
+    <h2>Program documentation available to qualified parties.</h2>
+    <p class="lede">The full Program Concept &amp; Validation Framework, market baseline and pilot design materials are available on request to institutional investors, capital partners and program stakeholders.</p>
+    <div class="contact-box">
+      <div class="big">Livability LLC — Corporate Office</div>
+      <p style="color:var(--muted); font-size:14.5px;">Encinitas, California · <a class="contact-mail" href="mailto:evolvepivot@protonmail.com">evolvepivot@protonmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brandline">LIVABILITY LLC</div>
+    <p class="disc"><strong>Important notice:</strong> This website presents a program concept in its validation stage and is provided for general information only. Nothing on this site constitutes an offer to sell, a solicitation of an offer to buy, or a recommendation of any security, investment vehicle, or financial product. Statements regarding program structure, sourcing, or economics are working assumptions subject to validation and may change. Participation, if and when offered, would occur solely through formal offering documents defining ownership, risk, and exit terms. No returns are promised or implied.</p>
+    <p class="legal">© 2026 Livability LLC. All rights reserved. Program Concept &amp; Validation Framework v3 — September 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
